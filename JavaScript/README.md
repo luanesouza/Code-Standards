@@ -12,31 +12,31 @@ Only user *const* or *let*.
 
 ##Objects
 
-// YES
+###// YES
 `const newObject = {
 	firstName: 'Tatyana',
 	lastName: 'Fazlalizadeh',
 }`
 
-// BAD
+###// BAD
   `const newObject = { firstName: 'Tatyana', lastName: 'Fazlalizadeh', }`
 
-// BAD
+###// BAD
 `const newObject = { firstName: 'Tatyana',
 	lastName: 'Fazlalizadeh', }`
 
 Arrays
 
-// GOOD
+###// GOOD
 `const myArray = [
 	'Tatyana',
 	'Fazlalizadeh',
 ]`
 
-// BAD
+###// BAD
 `const myArray = [ 'Tatyana', 'Fazlalizadeh', ]`
 
-// BAD
+###// BAD
 `const myArray = [ 'Tatyana',
 	'Fazlalizadeh', ]`
 
@@ -44,17 +44,17 @@ Arrays
 If, then, else
 `let someVar = 'Something'`
 
-// GOOD
+###// GOOD
 `if (someVar) {
 	callSomeFunc(someVar)
 } else {
 	doSomethingElse()
 }`
 
-// BAD
+###// BAD
 `if (someVar) { callSomeFunc(someVar) } else { doSomethingElse() }`
 
-// BAD
+###// BAD
 `if (someVar) {
  callSomeFunc(someVar)
 }
@@ -62,7 +62,7 @@ else {
  doSomethingElse()
 }`
 
-// GOOD
+###// GOOD
 `if ('parameter' === someVar) {
 	callSomeFunc(someVar)
 } else
@@ -70,7 +70,7 @@ if ('otherParameter' === someVar) {
 	doSomethingElse()
 }`
 
-// GOOD - spacing between parentheses is acceptable
+###// GOOD - spacing between parentheses is acceptable
 `if ( 'parameter' === someVar ) {
 	callSomeFunc( someVar )
 } else
@@ -78,7 +78,7 @@ if ( 'otherParameter' === someVar ) {
 	doSomethingElse()
 }`
 
-// BAD
+###// BAD
 `if ('parameter' === someVar)
 {
 	callSomeFunc(someVar)
@@ -88,7 +88,7 @@ else if ('otherParameter' === someVar)
 	doSomethingElse()
 }`
 
-// BAD
+###// BAD
 `if ('parameter' === someVar)
 {
 	callSomeFunc(someVar)
@@ -97,7 +97,7 @@ else if ('otherParameter' === someVar)
 	doSomethingElse()
 }`
 
-// BAD
+###// BAD
 `if (
     firstCondition() &&
     secondCondition() &&
@@ -106,114 +106,114 @@ else if ('otherParameter' === someVar)
     doStuff();
 }`
 
-// BAD
+###// BAD
 `if (
     someThing
 ) {
     doStuff();
 }`
 
-// GOOD
+###// GOOD
 `(someVar) ? 'we fit in' : 'one line'`
 
-// GOOD
+###// GOOD
 `(someVar)
 	? 'parameter is'
 	: 'even better'
 `
-// BAD
+###// BAD
 `(someVar) ?
 	'parameter is' :
 	'not good'
 `
-// BAD
+###// BAD
 `(someVar)
 ? 'parameter is'
 : 'not good'
 `
-// GOOD
+###// GOOD
 `(someVar) && doSomething()`
 
-// GOOD
+###// GOOD
 `someVar
 	&& someOtheVar
 	&& doSomething()
 `
-// BAD
+###// BAD
 `someVar &&
 someOtheVar &&
 doSomething()
 `
-// BAD
+###// BAD
 `someVar &&
 	someOtheVar &&
 	doSomething()
 `
-// BAD
+###// BAD
 `someVar && someOtheVar && doSomething()`
 
 ##Left-Hand Operators
 
-// GOOD
+###// GOOD
 `if (0 < someArray.length) {
 	// do something
 }`
 
-// GOOD
+###// GOOD
 `if ('' !== someString) {
 	// do something
 }`
 
-// GOOD
+###// GOOD
 `if ('function' !== typeof funcToTest) {
 	// do something
 }`
 
-// BAD
+###// BAD
 `if (someArray.length > 0) {
 	// do something
 }`
 
-// BAD
+###// BAD
 `if (someString !== '') {
 	// do something
 }
 `
-// BAD
+###// BAD
 `if (typeof funcToTest !== 'function') {
 	// do something
 }
 for loop
-// GOOD - loop through an array
+###// GOOD - loop through an array
 let i;
 for (i = 0; i < someArray.length; i++) {
 	// do something with someArray[i]
 }`
 
-// BAD
+###// BAD
 `for (i = 0; i < someArray.length; i++) {
 	// do something with someArray[i]
 }`
 
-// BAD
+###// BAD
 `for (i = 0; i < someArray.length; i++)
 {
 	// do something with someArray[i]
 }`
 
-// GOOD - loop through an object
+###// GOOD - loop through an object
 `for (let i in someObject) {
 	if (someObject.hasOwnProperty(i)) {
 		// do something with someArray[i]
 	}
 }`
 
-// GOOD
+###// GOOD
 `for (let i = 0; i < Object.keys(someObject).length; i++) {
 	// do something with someObject[i]
 }`
 
-// BAD
+###// BAD
 `for (let i in someObject)
 {
 	if (someObject.hasOwnProperty(i))
@@ -222,12 +222,12 @@ for (i = 0; i < someArray.length; i++) {
 	}
 }`
 
-// BAD
+###// BAD
 `for (let i in someObject) {
 	// do something with someArray[i]
 }`
 
-// BAD
+###// BAD
 `for (let i in someObject) {
 	if (someObject[i]) {
 		// do something with someArray[i]
@@ -235,14 +235,15 @@ for (i = 0; i < someArray.length; i++) {
 }`
 
 ## try, catch
-// GOOD
+
+###// GOOD
 `try {
     // Expressions
 } catch ( e ) {
     // Expressions
 }`
 
-// BAD
+###// BAD
 `try
 {
     // Expressions
@@ -251,7 +252,7 @@ for (i = 0; i < someArray.length; i++) {
     // Expressions
 }`
 
-// BAD
+###// BAD
 `try {
     // Expressions
 }
