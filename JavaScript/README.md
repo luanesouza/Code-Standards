@@ -12,7 +12,7 @@ Only user *const* or *let*.
 
 ## Objects
 
-### YES
+### GOOD
 `const newObject = {
 	firstName: 'Tatyana',
 	lastName: 'Fazlalizadeh',
