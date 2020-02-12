@@ -1,6 +1,6 @@
-#Javascript Code Book
+# Javascript Code Book
 
-##Naming Variables
+## Naming Variables
 
 *Always use semantic variables*.
 
@@ -10,9 +10,9 @@ Only user *const* or *let*.
 
 
 
-##Objects
+## Objects
 
-###// YES
+### YES
 `const newObject = {
 	firstName: 'Tatyana',
 	lastName: 'Fazlalizadeh',
@@ -25,7 +25,7 @@ Only user *const* or *let*.
 `const newObject = { firstName: 'Tatyana',
 	lastName: 'Fazlalizadeh', }`
 
-Arrays
+## Arrays
 
 ### GOOD
 `const myArray = [
@@ -260,7 +260,7 @@ catch ( e ) {
     // Expressions
 }`
 
-// ABSOLUTELY WRONG!
+## ABSOLUTELY WRONG!
 `try {
     // Expressions
 }`
